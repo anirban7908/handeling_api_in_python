@@ -1,6 +1,6 @@
 import requests
 
-def get_ramdon_user():
+def get_random_user():
     url = "https://api.freeapi.app/api/v1/public/randomusers/user/random"
 
     response = requests.get(url)
@@ -18,7 +18,7 @@ def get_ramdon_user():
 
 def main():
     try:
-        user_name, user_fullname, user_country = get_ramdon_user()
+        user_name, user_fullname, user_country = get_random_user()
         print(f"user_name: {user_name}, user_fullname: {user_fullname}, user_country: {user_country}")
     except Exception as e:
         print(f"Exception: {str(e)}")
